@@ -44,4 +44,4 @@ Compact PCB layout in KiCad
 
 ## Design files
 
-The PCB and schematic are being designed in KiCad. I have added the files in pcb folder and all other files including gerbers are in production folder.
+The PCB and schematic are being designed in KiCad. I have added the files in pcb folder and all other files including gerbers & BOM.csv are in production folder.
