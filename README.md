@@ -64,13 +64,11 @@ The board integrates USB-C connectivity, GPIO expansion headers, reset and boot 
 
 ## Extra Details
 
-### 1. PCB Dimensions
+### 1. PCB 
 
-The current PCB outline measures approximately **70 mm × 55 mm**, based on the Edge.Cuts rectangle in the KiCad layout.
-
+The current PCB outline is approx **70 mm × 55 mm**
 The board includes footprints for the ESP32-S3 module, USB-C connector, voltage regulator, supporting components, push buttons, indicator LEDs, and two expansion headers.
 
-Check the final board outline, mounting requirements, and component clearances before manufacturing.
 
 ### 2. GPIO Expansion
 
@@ -79,23 +77,22 @@ The schematic includes the following labelled ESP32-S3 signals:
 - IO1–IO18
 - IO21
 - IO35–IO47
-
-Two 1×20 headers with 2.54 mm pitch provide physical expansion points.
+Two 1×20 headers with 2.54 mm pitch
 
 ### 3. Power Architecture
 
 The intended power architecture is:
 
-1. **USB-C VBUS:** Supplies nominal 5V input.
-2. **AMS1117-3.3 regulator:** Intended to convert the input supply to 3.3V.
-3. **3.3V rail:** Supplies the ESP32-S3 module and other low-voltage circuitry.
-4. **Ground:** Provides a common electrical reference.
+1. **USB-C VBUS:** Supplies nominal 5V input
+2. **AMS1117-3.3 regulator:** Intended to convert the input supply to 3.3V
+3. **3.3V rail:** Supplies the ESP32-S3 module and other low-voltage circuitry
+4. **Ground:** Common
 
 ### 4. USB-C Functionality
 
 The schematic contains a USB-C receptacle with VBUS, GND, D+, and D− signal nets.
 
-The intended programming approach is to use the ESP32-S3's native USB interface, provided the final wiring and firmware configuration support it. No separate USB-to-UART bridge is listed.
+The intended programming approach is to use the ESP32-S3's native USB interface . provided the final wiring and firmware configuration support it. There is No separate USB-to-UART bridge 
 
 
 ## Bill of Materials
@@ -120,12 +117,12 @@ The complete BOM is available at [`Production/BOM.csv`](Production/BOM.csv).
 
 ## Getting Started
 
-To use a fabricated and assembled S3Forge-V1 board, you will need:
+To use a an assembled S3Forge-V1 board, you'll need:
 
 - An S3Forge-V1 PCB with components assembled 
 - A good USB-C data cable
 - A computer running Windows or any other OS
-- Arduino IDE or Espressif ESP-IDF
+- Arduino IDE or Espressif esp-idf
 - USB drivers if required by your OS
 
 ### Step 1: Install Arduino IDE
@@ -135,7 +132,7 @@ To use a fabricated and assembled S3Forge-V1 board, you will need:
 3. Open Boards Manager and install the ESP32 board package.
 4. Select an ESP32-S3-compatible target.
 
-The generic **ESP32S3 Dev Module** target may be suitable, but its configuration must match the exact module and hardware. Configure native USB options if required by the selected board package
+The generic **ESP32S3 Dev Module** may be suitable, but its configuration must match the exact module and hardware. Configure native USB options if required by the selected board package
 
 Official resources:
 
