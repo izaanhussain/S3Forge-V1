@@ -4,8 +4,7 @@
 A custom ESP32-S3 development board designed in KiCad, featuring USB-C connectivity, GPIO expansion headers, reset and boot controls, indicator LEDs, and an onboard 3.3V regulator.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/93699a3c-aa6a-4ff9-98e4-4e2506a33964" alt="S3Forge-V1 ESP32-S3 development board 3D render" width="800">
-</p>
+ <img width="678" height="460" alt="image" src="https://github.com/user-attachments/assets/d19b676d-e52a-4a1d-991c-edff30c422d0" />
 
 <p align="center">
   <em>3D render of the S3Forge-V1 PCB design.</em>
@@ -52,7 +51,7 @@ The board integrates USB-C connectivity, GPIO expansion headers, reset and boot 
 ### PCB Layout
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/6b32a46a-7766-4dc9-9d2b-1cabbd1250ea" alt="S3Forge-V1 PCB layout" width="800">
+ <img width="649" height="501" alt="Screenshot 2026-10-22 111045" src="https://github.com/user-attachments/assets/c5a1ed29-e515-4b11-8a02-f21711e54dc0" />
 </p>
 
 ### Additional 3D View
