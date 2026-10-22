@@ -150,7 +150,7 @@ For development with Espressif's native framework:
 
 Official documentation: https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/get-started/
 
-### Step 3: Connect the Board
+### Step 2: Connect the Board
 
 After verifying the assembled hardware:
 
@@ -160,22 +160,24 @@ After verifying the assembled hardware:
 
 If the board is not detected check the cable  USB-C wiring soldering, and native USB configuration
 
-### Step 4: Upload a Sample Program
 
-A firmware example is not currently included in this repository.
+### Step 3: Upload a Sample/test Program
 
-To perform an initial test:
+A basic test firmware is available in the `Firmware` folder as `test_firmware.ino`
 
-1. Create a minimal Arduino sketch or use an ESP32-S3 example.
-2. Select the appropriate ESP32-S3 board target.
-3. Select the detected upload port.
-4. Upload the program using the IDE.
+1. Open the `test_firmware.ino` file in Arduino IDE
+2. Select the ESP32-S3 board from the boards menu
+3. Connect the board using a USB data cable and select the correct port
+4. Click upload and wait for it to finish
 
-If upload fails, check the Boot and Reset controls and verify the hardware's USB connections and boot mode.
+set the baud rate to 115200 to check the output from the board
 
-Avoid connecting peripherals to unverified GPIO pins until the pin mapping has been confirmed.
+If the upload fails try holding the Boot button while uploading and press Reset if needed.
 
-### Step 5: View Serial Output
+The firmware is just a basic test for now and the board should be checked properly before connecting other components to the GPIO pins
+
+
+### Step 4: View Serial Output
 
 1. Open the Arduino IDE Serial Monitor or an appropriate ESP-IDF monitor
 2. Select the correct port
