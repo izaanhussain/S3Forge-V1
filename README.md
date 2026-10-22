@@ -7,12 +7,8 @@ A custom ESP32-S3 development board designed in KiCad, featuring USB-C connectiv
  <img width="678" height="460" alt="image" src="https://github.com/user-attachments/assets/d19b676d-e52a-4a1d-991c-edff30c422d0" />
 
 <p align="center">
-  <em>3D render of the S3Forge-V1 PCB design.</em>
+  <em> 3D render </em>
 </p>
-
-## Overview
-
-S3Forge-V1 is a custom development-board project built around the ESP32-S3-WROOM-1 module. It is designed to provide a platform for embedded development, electronics experimentation, and IoT prototyping.
 
 The board integrates USB-C connectivity, GPIO expansion headers, reset and boot buttons, indicator LEDs, and an onboard voltage regulator. The schematic, PCB layout, bill of materials, and manufacturing files are included in this repository.
 
