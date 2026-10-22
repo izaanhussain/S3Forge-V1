@@ -27,7 +27,7 @@ The board integrates USB-C connectivity, GPIO expansion headers, reset and boot 
 | Controls | Reset and Boot buttons |
 | Indicators | Power LED and user LED |
 | Design software | KiCad |
-| Firmware | Not included yet |
+| Firmware | Test Firmware Included |
 
 
 ## Features
