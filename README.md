@@ -50,7 +50,7 @@ The board integrates USB-C connectivity, GPIO expansion headers, reset and boot 
  <img width="649" height="501" alt="Screenshot 2026-10-22 111045" src="https://github.com/user-attachments/assets/c5a1ed29-e515-4b11-8a02-f21711e54dc0" />
 </p>
 
-### Additional 3D View
+### Back 3D View
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/e5cee043-8714-4334-8a2e-543ebd4b36c3" alt="S3Forge-V1 additional PCB render" width="800">
