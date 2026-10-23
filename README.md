@@ -1,7 +1,7 @@
 
 # S3Forge-V1
 
-A custom ESP32-S3 development board designed in KiCad, featuring USB-C connectivity, GPIO expansion headers, reset and boot controls, indicator LEDs, and an onboard 3.3V regulator.
+A custom ESP32-S3 development board designed in KiCad, featuring USB-C connectivity, GPIO expansion headers, reset and boot controls with indicator leds, and an onboard 3.3V regulator
 
 <p align="center">
  <img width="678" height="460" alt="image" src="https://github.com/user-attachments/assets/d19b676d-e52a-4a1d-991c-edff30c422d0" />
@@ -10,7 +10,7 @@ A custom ESP32-S3 development board designed in KiCad, featuring USB-C connectiv
   <em> render </em>
 </p>
 
-The board integrates USB-C connectivity, GPIO expansion headers, reset and boot buttons, indicator LEDs, and an onboard voltage regulator. The schematic, PCB layout, bill of materials, and manufacturing files are included in this repository.
+the schematic PCB layout, bill of materials, and manufacturing files are included in the repository 
 
 ## Specifications
 
@@ -32,25 +32,21 @@ The board integrates USB-C connectivity, GPIO expansion headers, reset and boot 
 
 ## Features
 
-- ESP32-S3-WROOM-1 module footprint
-- USB-C connector with USB D+ and D− signal nets
-- Two 20-pin GPIO expansion headers
-- Reset and Boot push buttons
-- Power and user indicator LEDs
-- Onboard AMS1117-3.3 voltage regulator
-- Supporting capacitors and resistors
-- Editable KiCad schematic and PCB layout
-- Bill of materials and Gerber manufacturing archive
+* ESP32-S3-WROOM-1 module footprint
+* USB-C connector with USB D+ and D− signal nets
+* Two 20-pin GPIO expansion headers
+* Reset and Boot push buttons
+* Power and user indicator LEDs
+* Onboard AMS1117-3.3 voltage regulator
+* Supporting capacitors and resistors
+* Editable KiCad schematic and PCB layout
+* Bill of materials and Gerber manufacturing archive
 
-## PCB Design
-
-### PCB Layout
 
 <p align="center">
  <img width="649" height="501" alt="Screenshot 2026-10-22 111045" src="https://github.com/user-attachments/assets/c5a1ed29-e515-4b11-8a02-f21711e54dc0" />
 </p>
 
-### Back 3D View
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/e5cee043-8714-4334-8a2e-543ebd4b36c3" alt="S3Forge-V1 additional PCB render" width="800">
@@ -66,33 +62,33 @@ The board integrates USB-C connectivity, GPIO expansion headers, reset and boot 
 
 ### 1. PCB 
 
-The current PCB outline is approx **70 mm × 55 mm**
-The board includes footprints for the ESP32-S3 module, USB-C connector, voltage regulator, supporting components, push buttons, indicator LEDs, and two expansion headers.
+the current PCB outline is approx **70 mm × 55 mm**
+The board includes footprints for the ESP32-S3 module, USB-C connector, voltage regulator, supporting components, push buttons, indicator LEDs, and two expansion headers
 
 
 ### 2. GPIO Expansion
 
 The schematic includes the following labelled ESP32-S3 signals:
 
-- IO1–IO18
-- IO21
-- IO35–IO47
-Two 1×20 headers with 2.54 mm pitch
+* IO1–IO18
+* IO21
+* IO35–IO47
+and Two 1×20 headers with 2.54 mm pitch
 
 ### 3. Power Architecture
 
-The intended power architecture is:
+the power architecture here is:
 
-1. **USB-C VBUS:** Supplies nominal 5V input
-2. **AMS1117-3.3 regulator:** Intended to convert the input supply to 3.3V
-3. **3.3V rail:** Supplies the ESP32-S3 module and other low-voltage circuitry
-4. **Ground:** Common
+1). **USB-C VBUS:** Supplies 5V input
+2). **AMS1117-3.3 regulator:** used to convert the input supply to 3.3V
+3). **3.3V rail:** supplies the ESP32-S3 module and other low-voltage circuitry
+4). **Ground:** Common ground pin
 
 ### 4. USB-C Functionality
 
-The schematic contains a USB-C receptacle with VBUS, GND, D+, and D− signal nets.
+the schematic contains a USB-C receptacle with VBUS, GND, D+, and D− signal nets
 
-The intended programming approach is to use the ESP32-S3's native USB interface . provided the final wiring and firmware configuration support it. There is No separate USB-to-UART bridge 
+the programming approach is to use the ESP32-S3's native USB interface . provided the final wiring and firmware configuration support it. there is no separate usb to UART 
 
 
 ## Bill of Materials
@@ -115,30 +111,30 @@ The complete BOM is available at [`Production/BOM.csv`](Production/BOM.csv).
 | R5 | 1 kΩ resistor | 1 |
 | R6 | 330 Ω resistor | 1 |
 
-## Getting Started
+## getting Started
 
-To use a an assembled S3Forge-V1 board, you'll need:
+to use a an assembled S3Forge-V1 board, you'll need:-
 
-1) An S3Forge-V1 PCB with components  assembled 
-2) A good USB-C data cable
+1) An S3Forge-V1 PCB with components soldered 
+2) A proper USB-C data cable
 3) A computer running Windows or any other OS
 4) arduino IDE or Espressif esp-idf
 5) install the USB drivers if required by your OS
 
-### Step 1: Install Arduino IDE
+### Step 1: install Arduino IDE
 
-1. Install the Arduino IDE from the official Arduino website.
-2. Open Preferences and configure the Espressif ESP32 board package using the official installation instructions.
-3. Open Boards Manager and install the ESP32 board package.
-4. Select ESP32S3 Dev Module from Tools → Board → esp32.
+1. install the Arduino IDE from the official Arduino website
+2. open preferences and configure the Espressif ESP32 board package using the official installation instructions
+3. open Boards Manger and install the ESP32 board package
+4. select ESP32S3 Dev Module from Tools -> Board -> esp32
 
-The upload settings are:-
+the upload settings are:-
 
 1)USB CDC On Boot: Enabled
 2)Upload Mode: Hardware CDC and JTAG
 3)USB Mode: Hardware CDC and JTAG
 
-Select the COM port that appears when you connect the board and upload the firmware
+select the COM port that appears when you connect the board and upload the firmware
 
 Official resources you can checkout:-
 - Arduino IDE: https://www.arduino.cc/en/software
@@ -148,48 +144,46 @@ Official resources you can checkout:-
 
 For development with Espressif's native framework:
 
-1. Install ESP-IDF using the official guide
-2. Create or open an ESP-IDF example project
-3. Set the target to `esp32s3`.
-4. Configure the correct serial or USB interface for the board
+1). install ESP-IDF using the official guide
+2). create or open an ESP-IDF example project
+3). set the target to `esp32s3`.
+4). configure the correct serial or USB interface for the board
 
 Official documentation: https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/get-started/
 
 ### Step 2: Connect the Board
 
-After verifying the assembled hardware:
+after verifying the assembled hardware:--
 
-1. Connect the board to your computer using a USB-C data cable
-2. Check the available serial devices or Windows Device Manager
-3. Identify the port associated with the board
+1). connect the board to your computer using a USB-C data cable
+2). check the available serial devices or Windows Device Manager
+3). identify the port associated with the board
 
-If the board is not detected check the cable  USB-C wiring soldering, and native USB configuration
+if the board is not detected check the cable  USB-C wiring soldering, and native USB config
 
 
 ### Step 3: Upload a Sample/test Program
 
 A basic test firmware is available in the `Firmware` folder as `test_firmware.ino`
 
-1. Open the `test_firmware.ino` file in Arduino IDE
-2. Select the ESP32-S3 board from the boards menu
-3. Connect the board using a USB data cable and select the correct port
-4. Click upload and wait for it to finish
+1). open the `test_firmware.ino` file in Arduino IDE
+2). select the ESP32-S3 board from the boards menu
+3). connect the board using a USB data cable and selct the correct port
+4). click upload and wait for it to finish
 
 set the baud rate to 115200 to check the output from the board
 
-If the upload fails try holding the Boot button while uploading and press Reset if needed.
+if the upload fails try pressing and holding the boot button while uploading and press Reset if needed
 
-The firmware is just a basic test for now and the board should be checked properly before connecting other components to the GPIO pins
+the firmware is just a basic test for now and the board should be checked properly before connecting other components to the GPIO pins, will release the proper specs and GPIO functions after i build it successfully 
 
 
 ### Step 4: View Serial Output
 
-1. Open the Arduino IDE Serial Monitor or an appropriate ESP-IDF monitor
-2. Select the correct port
-3. Set the baud rate to match the sample program. For a typical UART-style example, this may be 115200 baud rate
-4. Reset the board and check for output 
-
-Serial output depends on the interface used by the firmware. Native USB CDC and UART output are different interfaces, so confirm the selected configuration
+1). open the Arduino IDE Serial Monitor or an appropriate ESP-IDF monitor
+2). select the correct port
+3). set the baud rate to match the sample program which is 115200 baud rate
+4). reset the board and check for output 
 
 ## Repository Structure
 
