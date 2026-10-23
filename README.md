@@ -119,23 +119,28 @@ The complete BOM is available at [`Production/BOM.csv`](Production/BOM.csv).
 
 To use a an assembled S3Forge-V1 board, you'll need:
 
-- An S3Forge-V1 PCB with components assembled 
-- A good USB-C data cable
-- A computer running Windows or any other OS
-- Arduino IDE or Espressif esp-idf
-- USB drivers if required by your OS
+1) An S3Forge-V1 PCB with components  assembled 
+2) A good USB-C data cable
+3) A computer running Windows or any other OS
+4) arduino IDE or Espressif esp-idf
+5) install the USB drivers if required by your OS
 
 ### Step 1: Install Arduino IDE
 
 1. Install the Arduino IDE from the official Arduino website.
 2. Open Preferences and configure the Espressif ESP32 board package using the official installation instructions.
 3. Open Boards Manager and install the ESP32 board package.
-4. Select an ESP32-S3-compatible target.
+4. Select ESP32S3 Dev Module from Tools → Board → esp32.
 
-The generic **ESP32S3 Dev Module** may be suitable, but its configuration must match the exact module and hardware. Configure native USB options if required by the selected board package
+The upload settings are:-
 
-Official resources:
+1)USB CDC On Boot: Enabled
+2)Upload Mode: Hardware CDC and JTAG
+3)USB Mode: Hardware CDC and JTAG
 
+Select the COM port that appears when you connect the board and upload the firmware
+
+Official resources you can checkout:-
 - Arduino IDE: https://www.arduino.cc/en/software
 - Arduino-ESP32 documentation: https://docs.espressif.com/projects/arduino-esp32/en/latest/
 
