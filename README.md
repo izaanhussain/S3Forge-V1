@@ -1,4 +1,3 @@
-
 # S3Forge-V1
 
 A custom ESP32-S3 development board designed in KiCad, featuring USB-C connectivity, GPIO expansion headers, reset and boot controls with indicator leds, and an onboard 3.3V regulator
